@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Visit</title>
+<script src="jquery-3.7.1.min.js"> </script>
+
+<style>
+    /* ---------- Global Styles ---------- */
+    :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --accent: #00cec9;
+            --dark: #0f1020;
+            --darker: #090a16; 
+            --light: #f5f6fa;
+            --text: #d1d8e0;
+            --success: #00b894;
+            --danger: #ff6b6b;
+            --warning: #fdcb6e;
+            --brightorange: rgb(255, 81, 0);
+            --brightblue:#0c8aff;
+            --depth: #131428;     /* slightly lighter for depth areas */
+            --light-shadow: rgba(255, 255, 255, 0.08);
+             --dark-shadow: rgba(0, 0, 0, 0.45);
+    }
+    * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         font-family:  'Poppins', sans-serif;
+         }
+
+    body {
+        margin: 0;
+        background: var(--darker);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        color: var(--brightblue);
+        margin-bottom: 5px;
+    }
+
+    p.subtitle {
+        text-align: center;
+        margin-top: 0;
+        color: #b8b8b8;
+        margin-bottom: 30px;
+    }
+
+    /* ---------- Form Container ---------- */
+    .form-container {
+        background: var(--dark);
+        padding: 30px;
+        border-radius: 12px;
+        width: 490px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    /* ---------- Input Styles ---------- */
+    label {
+        display: block;
+        margin-top: 18px;
+        font-size: 0.95rem;
+        color: var(--light);
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        background: var(--darker);
+        border: 1px solid transparent;
+        border-radius: 6px;
+        color: white;
+        font-size: 14px;
+        outline: none;
+        font-weight: 500;
+        box-shadow:
+    inset 4px 4px 8px rgba(0,0,0,0.55),   /* deeper shadow bottom-right */
+    inset -4px -4px 8px rgba(255,255,255,0.06), /* stronger top-left highlight */
+    inset 1px 1px 2px rgba(0,0,0,0.35),   /* fine depth detail */
+    inset -1px -1px 2px rgba(255,255,255,0.05); /* subtle edge highlight */
+        transition: 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #ffffffad;
+        
+    }
+
+    textarea {
+        height: 90px;
+        resize: none;
+    }
+
+    /* ---------- Submit Button ---------- */
+    button {
+        margin-top: 25px;
+        width: 100%;
+        padding: 14px;
+        background:  linear-gradient(to right, #ff6600, #ff3300);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+       opacity: 0.8;
+    }
+    .errormessage{
+        background: red;
+        color: white;
+    }
+
+    /* ==========================================================
+   📱 EXTRA SMALL PHONES — MAX 480px
+   Everything shrinks and spacing tightens
+   ========================================================== */
+@media (max-width:480px){
+
+    body {
+        padding: 20px;
+    }
+
+    .form-container {
+        width: 92%;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    input, select, textarea {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    textarea {
+        height: 80px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 11px;
+    }
+}
+
+
+
+/* ==========================================================
+   📱 NORMAL PHONES — MAX 576px
+   Slightly bigger form and better readability
+   ========================================================== */
+@media (max-width:576px){
+
+    .form-container {
+        width: 90%;
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+/* ==========================================================
+   📱📗 TABLETS — MAX 768px
+   Nicely centered, slightly larger width
+   ========================================================== */
+@media (max-width:768px){
+
+    body {
+        padding: 35px;
+    }
+
+    .form-container {
+        width: 430px;
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* ==========================================================
+   💻 SMALL LAPTOPS — MAX 992px
+   Displays the form with more breathing room
+   ========================================================== */
+@media (max-width:992px){
+
+    .form-container {
+        width: 480px;
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+
+
+/* ==========================================================
+   🖥️ LARGE DESKTOPS — MIN 1440px
+   Make the form look premium on big screens
+   ========================================================== */
+@media (min-width:1440px){
+
+    body {
+        padding: 70px;
+    }
+
+    .form-container {
+        width: 540px;
+        padding: 45px 30px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    input, select, textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+
+    
+
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Book Your Visit</h1>
+    <p class="subtitle">Reserve your spot for an unforgettable aquarium experience</p>
+
+    <form id="visitForm">
+        
+        <label>Full Name *</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label>Email Address *</label>
+        <input type="email" id="email" placeholder="your.email@example.com" required>
+
+        <label>Phone Number *</label>
+        <input type="tel" id="phone" placeholder="+1 234 567 8900" required>
+
+        <label>Visit Date *</label>
+        <input type="date" id="date" required>
+
+        <label>Number of Visitors *</label>
+        <input type="number" id="visitors" min="1" value="1" required>
+
+        <label>Select Event *</label>
+        <select id="event" required>
+            <option value="">Choose an event</option>
+            <option>Shark Feeding Show</option>
+            <option>Dolphin Playtime</option>
+            <option>Guided Aquarium Tour</option>
+            <option>Educational Kids Program</option>
+        </select>
+
+        <label>Special Requests (Optional)</label>
+        <textarea id="requests" placeholder="Let us know if you have any special requirements..."></textarea>
+
+        <button type="submit">Submit Booking</button>
+        <p class="errormessage"></p>
+    </form>
+</div>
+
+
+<!-- ---------- JavaScript ---------- -->
+<script>
+    $(document).ready(function(){
+        $("#visitForm").submit(function(event){
+            var name = $("#name").val().trim();
+            var email = $("#email").val().trim();
+            var phone = $("#phone").val().trim();
+            var date = $("#date").val().trim();
+            var visitors = $("#visitors").val().trim();
+             var event = $("#event").val().trim();
+
+            let valid= name !== '' && email !== '' && phone !== '' && date !== '' && visitors !== '' && event !== '';
+
+            if (valid){
+                alert("form submitted succesfully");
+            }else{
+                $("errormessage").text("please fill all the fields");
+            }
+            
+
+            
+
+
+        });
+    });
+
+</script>
+
+
+</body>
+</html>

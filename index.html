@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-…(hash here)…"  
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header" id="main-header">
+        <div class="logo"><img src="/media/NexusAquariumlogo.png" alt=""></div>
+        <button class="menu-toggle " aria-label="Toggle navigation" aria-expanded="false">
+       <i class="fas fa-bars open-icon"></i>    
+       <i class="fas fa-times close-icon"></i> 
+       </button>
+        <nav  class="navbar">
+            <ul>
+                <li><a href="#carousel">Home</a></li>
+                <li><a href="#gallery-section">Gallery</a></li>
+                <li><a href="#upcomingevents">Events</a></li>
+                <li><a href="#marine-life-table">Marine life</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="#visit-us">Visit us</a></li>
+            </ul>
+        </nav>
+   </header>
+   
+<div class="carousel" id="carousel">
+  <!-- Main video carousel list -->
+  <div class="list">
+
+    <div class="item">
+      <video controls autoplay muted loop poster="turtle.jpg">
+        <source src="./media/turtlevideo.mp4" type="video/mp4">
+      </video>
+
+      <div class="content">
+        <div class="feature-title">site-seeing & gallery</div>
+        <div class="title">Discover our</div>
+        <div class="sub-title">gallery</div>
+        <div class="description">
+          Watch photos of marine life and aquarium space
+        </div>
+
+        <div class="btn-container">
+          <button><a href="#gallery-section">explore more</a></button>
+          <button><a href="#upcoming events">go to events</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <video controls autoplay muted loop poster="placeholder.jpg">
+        <source src="./media/welcomevideo.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="feature-title">welcome to</div>
+        <div class="title">Nexus </div>
+        <div class="sub-title">Aquarium</div>
+        <div class="description">
+          Dive into an underwater adventure and explore the magic of marine life
+        </div>
+
+        <div class="btn-container">
+          <button><a href="">explore more</a></button>
+          <button><a href="#upcomingevents">go to events</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <video controls autoplay muted loop poster="placeholder.jpg">
+        <source src="./media/jellyfishvideo.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="feature-title">Marine life information</div>
+        <div class="title">Dive deep into</div>
+        <div class="sub-title">marine life</div>
+        <div class="description">
+          learn about fascinating sea creatures from around the world
+        </div>
+
+        <div class="btn-container">
+          <button><a href="#carousel">explore more</a></button>
+          <button><a href="#upcomingevents">go to events</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <video controls autoplay muted loop poster="placeholder.jpg">
+        <source src="./media/5609974-hd_1920_1080_30fps.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="feature-title">Fun events</div>
+        <div class="title">real-time</div>
+        <div class="sub-title">learning for kids</div>
+        <div class="description">
+          Hands-on workshops and special activities for kids. equally enjoyable for school trips or family trips
+        </div>
+
+        <div class="btn-container">
+          <button><a href="#upcomingevents">explore more</a></button>
+          <button><a href="#upcomingevents">go to events</a></button>
+        </div>
+      </div>
+    </div>
+
+     </div> <!--  closes .list correctly -->
+
+
+  <!-- Arrows -->
+  <div class="arrows">
+    <button class="previous"><i class="fa-solid fa-angle-left"></i></button>
+    <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+  </div>
+ </div> <!-- closes .carousel -->
+<!-- -------------------------------- -->
+
+   <section class="sitelocation-section" >
+    <!--left div text-->
+    <div class="sitelocation-wrapper">
+    <div class="sitelocation-content">
+      
+      <h2>What's Inside </h2>
+      <h2 class="brand-name">Nexus <br><span>aquarium</span></h2>
+      <p>Get ready to walk through underwater tunnels, meet fascinating sea creatures, and experience close-up encounters with ocean life</p>
+      </div>
+      <div class="sitelocation-list">
+        <ul>
+          <li>Open for all age groups</li>
+          <li>Over 200 aquatic species</li>
+          <li>Close interaction with animals</li>
+        </ul>
+      </div>
+      </div>
+   
+    <!--right div static aquarium inside images carousel-->
+    <div class="static-sitelocationcarousel">
+    
+    <div class="sitelocation-images">
+      <div class="static-img1">
+        <img src="./media/buildingoutside.jpg" alt="">
+        <div class="image-overlay"></div>
+        <div class="info-box">Exterior building view</div>
+      </div>
+
+     <!-- 1) Large Aquarium Tunnel at Entrance -->
+<div class="static-img9">
+  <img src="./media/underwateseatunner.jpg" alt="Aquarium Entrance Tunnel">
+  <div class="image-overlay"></div>
+  <div class="info-box">Large Aquarium Tunnel at Entrance</div>
+</div>
+
+<!-- 2) Dining Area -->
+<div class="static-img10">
+  <img src="./media/resturant3.avif" alt="Aquarium Dining Area">
+  <div class="image-overlay"></div>
+  <div class="info-box">Ocean-Themed Dining Area</div>
+</div>
+
+<!-- 3) Lush Green Park Surrounding Architecture -->
+<div class="static-img11">
+  <img src="./media/tourspot1.avif" alt="Green Park Around Aquarium">
+  <div class="image-overlay"></div>
+  <div class="info-box">Lush Green Park Surrounding Architecture</div>
+</div>
+
+<!-- 4) Suitable Description for an Aquarium Site Location -->
+<div class="static-img12">
+  <img src="./media/roundedaquarium.avif" alt="Aquatic Life Habitat Zone">
+  <div class="image-overlay"></div>
+  <div class="info-box">Aquatic Life Habitat Zone</div>
+</div>
+
+</div>
+  
+    
+   <button class="sitelocation-prev"><i class="fa-solid fa-angle-left"></i></button>
+<button class="sitelocation-next"><i class="fa-solid fa-angle-right"></i></button>
+
+  
+
+    </div><!--closing image scrolling div inside are bittons to scroll-->
+
+   </section>
+   <!-- ========= -->
+
+<section class="gallery-section" id="gallery-section">
+    <h2 class="gallery-heading">Our Gallery</h2>
+    <p>Browse by Categories and explore the breathtaking marine scenes</p>
+
+    <div class="imgcategory-grid">
+      <div class="flip-card">
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front">
+        <img src="./media/jellyfish.avif" alt="">
+        <div class="image-overlay"></div>
+        <div class="info-box">Marine Life</div>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+        <div class="flip-text">
+        <h3>Marine Life</h3>
+        <p>Explore the vibrant underwater world—colorful fish, coral reefs, sharks, rays, jellyfish and more.</p>
+        </div>
+
+        <button class="flip-btn">Explore</button>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="flip-card">
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front">
+        <img src="./media/feeding swan.avif" alt="">
+         <div class="image-overlay"></div>
+        <div class="info-box">Live Feeding Shows</div>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+        <div class="flip-text">
+        <h3>Live Feeding Shows</h3>
+        <p>Catch the excitement of live feeding sessions! while learning fun facts about their behavior and diets.</p>
+        </div>
+
+        <button class="flip-btn">Explore</button>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="flip-card">
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front">
+        <img src="./media/pirate1.avif" alt="">
+         <div class="image-overlay"></div>
+        <div class="info-box">Events & Activities</div>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+        <div class="flip-text">
+        <h3>Events & Activities</h3>
+        <p>Discover all special events happening inside the aquarium. Perfect for families, students, and group fun.</p>
+        </div>
+
+        <button class="flip-btn">Explore</button>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="flip-card">
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front">
+        <img src="./media/dining-area.jpg" alt="">
+         <div class="image-overlay"></div>
+        <div class="info-box">Architecture & Spaces</div>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+        <div class="flip-text">
+        <h3>Architecture & Spaces</h3>
+        <p>Explore dining spaces, walk-through tunnels, fun zones, viewing domes, and immersive photo spots throughout the aquarium.</p>
+        </div>
+
+        <button class="flip-btn">Explore</button>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="flip-card">
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front">
+        <img src="./media/kidsedu.avif" alt="">
+         <div class="image-overlay"></div>
+        <div class="info-box">Conservation & Education</div>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+        <div class="flip-text">
+        <h3>Conservation & Education</h3>
+        <p>Learn about our rescue programs, breeding projects, and how we protect marine ecosystems.</p>
+        </div>
+
+        <button class="flip-btn">Explore</button>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="flip-card">
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front">
+        <img src="./media/visitors.png" alt="">
+         <div class="image-overlay"></div>
+        <div class="info-box">Visitors Diaries</div>
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+        <div class="flip-text">
+        <h3>Visitor Diaries</h3>
+        <p>Watch our visitors enjoying and cherishing the world underwaters </p>
+        </div>
+        <button class="flip-btn">Explore</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="siteseeing-section" id="siteseeing-section">
+  <h2>You May Also Visit</h2>
+   <button class="siteseeing-btn"><i class="fa-solid fa-angles-down"></i></button>
+
+  <div class="siteseeing-section-wrapper">
+   
+
+    <div class="siteseeing-grid">
+      <!-- Left column for Restaurants -->
+      <div class="bestrestaurants">
+        <h3><div class="icon"><i class="fa-solid fa-utensils"></i></div> Best Restaurants Nearby</h3>
+        <p class="description">28 spots within 7 miles</p>
+
+        <div class="sitebox">
+          <div class="site-img">
+            <img src="./media/horizon-grill-indoor.jpg" alt="Tour Spot">
+          </div>
+          <div class="site-content">
+            <div class="site-info">
+              <h4>Kampachi Pavillion</h4>
+              <p>Japanese Sushi</p>
+            </div>
+             <p class="distance">2.4 miles away</p>
+          </div>
+        </div>
+
+        <div class="sitebox">
+          <div class="site-img">
+            <img src="./media/satellite-restaurant.jpg" alt="Tour Spot">
+          </div>
+          <div class="site-content">
+            <div class="site-info">
+              <h4>Cielo Rooftoop</h4>
+              <p>Modern and western food</p>
+            </div>
+             <p class="distance">3 miles away</p>
+          </div>
+        </div>
+
+        <div class="sitebox">
+          <div class="site-img">
+            <img src="./media/dining-area.jpg" alt="Tour Spot">
+          </div>
+          <div class="site-content">
+            <div class="site-info">
+              <h4>Horizon Grill</h4>
+              <p>International and European</p>
+            </div>
+             <p class="distance">4 miles away</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- right column for Tour Spots -->
+      <div class="tourspots">
+        <h3><div><i class="fa-solid fa-location-dot"></i></div> Best Tour Spots Nearby</h3>
+        <p class="description">28 spots within 7 miles</p>
+
+        <div class="sitebox">
+          <div class="site-img">
+            <img src="./media/buildingoutside.jpg" alt="Tour Spot">
+          </div>
+          <div class="site-content">
+            <div class="site-info">
+              <h4>Traders Hotel</h4>
+              <p>City central, Kaula lampur, Malaysia</p>
+            </div>
+             <p class="distance">2.8 miles away</p>
+          </div>
+        </div>
+
+        <div class="sitebox">
+          <div class="site-img">
+            <img src="./media/caves.webp" alt="Tour Spot">
+          </div>
+          <div class="site-content">
+            <div class="site-info">
+              <h4>Genting Highlands</h4>
+              <p>hill resort in Pahang, Malaysia</p>
+            </div>
+             <p class="distance">3 miles away</p>
+          </div>
+        </div>
+
+        <div class="sitebox">
+          <div class="site-img">
+            <img src="./media/tourspot1.avif" alt="Tour Spot">
+          </div>
+          <div class="site-content">
+            <div class="site-info">
+              <h4>Colmar Tropicale & Batu Caves</h4>
+              <p>Jln Ampang, Kuala Lumpur City Centre</p>
+            </div>
+            <p class="distance">7 miles away</p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- grid closes -->
+  </div> <!-- wrapper closes -->
+</section>
+
+          <!-- <--- EVENTS SECTION --------- -->
+  <section class="events" id="upcomingevents">
+    <h2>Upcoming Events</h2>
+    <div class="event-grid">
+      <div class="event-card">
+        <img src="./media/mermaidshowevent.jpg" alt="Event 1" />
+        <div class="event-content">
+          <h3>Mermaids Underwater</h3>
+          <p>Witness the magical underwater mermaid show with glowing lights and music.</p>
+          <div class="event-date"><i class="fa-solid fa-calendar-days"></i> Nov 12 - 22</div>
+          <a href="Booking.html" class="event-btn">Book tickets</a>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="./media/sharkevent.jpg" alt="Event 2" />
+        <div class="event-content">
+          <h3>Shark Feeding Session</h3>
+          <p>Experience the thrilling shark feeding guided by our expert divers.</p>
+          <div class="event-date"><i class="fa-solid fa-calendar-days"></i> Dec 5 - 10</div>
+          <a href="Booking.html" class="event-btn">Book Tickets</a>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="./media/seacoralsshow.jpg" alt="Event 3" />
+        <div class="event-content">
+          <h3>Coral Reef Exhibition</h3>
+          <p>Explore our new coral section showcasing rare marine ecosystems.</p>
+          <div class="event-date"><i class="fa-solid fa-calendar-days"></i> Dec 18 - 28</div>
+          <a href="Booking.html" class="event-btn">Book Tickets</a>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="./media/jellyfishshow.jpg" alt="Event 4" />
+        <div class="event-content">
+          <h3>Jellyfish Glow Night</h3>
+          <p>Enjoy a night walk among glowing jellyfish tanks and live DJ music.</p>
+          <div class="event-date"><i class="fa-solid fa-calendar-days"></i> Jan 3 - 9</div>
+          <a href="Booking.html" class="event-btn">Book Tickets</a>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="./media/penguinparadeevent.jpg" alt="Event 5" />
+        <div class="event-content">
+          <h3>Penguin Parade</h3>
+          <p>Watch our cute penguins in their special snow arena for a limited time.</p>
+          <div class="event-date"><i class="fa-solid fa-calendar-days"></i> Jan 15 - 20</div>
+          <a href="Booking.html" class="event-btn">Book Tickets</a>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="./media/dolphinshow.avif" alt="Event 6" />
+        <div class="event-content">
+          <h3>Dolphin show</h3>
+          <p>Fun and educational hands-on activities designed for children of all ages.</p>
+          <div class="event-date"><i class="fa-solid fa-calendar-days"></i> Feb 1 - 10</div>
+          <a href="Booking.html" class="event-btn">Book Tickets</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ----------Marine Life information table ----- -->
+<section class="table-section" id="marine-life-table">
+   <h1>Marine Life Collection</h1>
+
+  <div class="tabs">
+    <button data-show="fish">Fish</button>
+    <button data-show="reptiles">Reptiles</button>
+    <button data-show="invertebrates">Invertebrates</button>
+    <button data-show="sharks">Sharks</button>
+  </div>
+
+  <!-- Tables (same content as before) -->
+  <!-- Fish Table -->
+  <div id="fish" class="table-container">
+    <table>
+      <tr>
+        <th>Species</th>
+        <th>Scientific Name</th>
+        <th>Habitat</th>
+        <th>Diet</th>
+        <th>Size</th>
+      </tr>
+      <tr>
+        <td>Clownfish</td>
+        <td>Amphiprioninae</td>
+        <td>Coral Reefs</td>
+        <td>Omnivore</td>
+        <td>4-5 inches</td>
+      </tr>
+       <tr>
+        <td>Blue Tang</td>
+        <td>Paracanthurus hepatus</td>
+        <td>Coral Reefs</td>
+        <td>Herbivore</td>
+        <td>12 inches</td>
+      </tr>
+      <tr>
+        <td>Lionfish</td>
+        <td>Pterois</td>
+        <td>Tropical Waters</td>
+        <td>Carnivore</td>
+        <td>12-15 inches</td>
+      </tr>
+      <tr>
+        <td>Angelfish</td>
+        <td>Pomacanthidae</td>
+        <td>Coral Reefs</td>
+        <td>Omnivore</td>
+        <td>6-14 inches</td>
+      </tr>
+      <tr>
+        <td>Seahorse</td>
+        <td>Hippocampus</td>
+        <td>Shallow Waters</td>
+        <td>Carnivore</td>
+        <td>0.6-14 inches</td>
+      </tr>
+    </table>
+  </div>
+  <!-- Reptiles Table -->
+  <div id="reptiles" class="table-container">
+    <table>
+      <tr>
+        <th>Species</th>
+        <th>Scientific Name</th>
+        <th>Habitat</th>
+        <th>Diet</th>
+        <th>Size</th>
+      </tr>
+      <tr>
+        <td>Green Sea Turtle</td>
+        <td>Chelonia mydas</td>
+        <td>Tropical & Subtropical Seas</td>
+        <td>Herbivore</td>
+        <td>3-4 feet</td>
+      </tr>
+      <tr>
+        <td>Loggerhead Turtle</td>
+        <td>Caretta caretta</td>
+        <td>Ocean Waters</td>
+        <td>Carnivore</td>
+        <td>3 feet</td>
+      </tr>
+       <tr>
+        <td>Leatherback Turtle</td>
+        <td>Dermochelys coriacea</td>
+        <td>Open Ocean</td>
+        <td>Carnivore</td>
+        <td>6-7 feet</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Invertebrates Table -->
+  <div id="invertebrates" class="table-container">
+    <table>
+      <tr>
+        <th>Species</th>
+        <th>Scientific Name</th>
+        <th>Habitat</th>
+        <th>Diet</th>
+        <th>Size</th>
+      </tr>
+      <tr>
+        <td>Jellyfish</td>
+        <td>Medusozoa</td>
+        <td>All Oceans</td>
+        <td>Carnivore</td>
+        <td>0.5-6 feet</td>
+      </tr>
+      <tr>
+        <td>Giant Pacific Octopus</td>
+        <td>Enteroctopus dofleini</td>
+        <td>Pacific Ocean</td>
+        <td>Carnivore</td>
+        <td>10-16 feet</td>
+      </tr>
+      <tr>
+        <td>Sea Anemone</td>
+        <td>Actiniaria</td>
+        <td>Shallow & Deep Waters</td>
+        <td>Carnivore</td>
+        <td>0.5-6 inches</td>
+      </tr>
+      <tr>
+        <td>Starfish</td>
+        <td>Asteroidea</td>
+        <td>Ocean Floor</td>
+        <td>Carnivore</td>
+        <td>4-12 inches</td>
+      </tr>
+       <tr>
+        <td>Stingray</td>
+        <td>Dasyatidae</td>
+        <td>Shallow Coastal Waters</td>
+        <td>Carnivore</td>
+        <td>2-7 feet</td>
+      </tr>
+    </table>
+  </div>
+
+   <!-- Sharks Table -->
+  <div id="sharks" class="table-container">
+    <table>
+      <tr>
+        <th>Species</th>
+        <th>Scientific Name</th>
+        <th>Habitat</th>
+        <th>Diet</th>
+        <th>Size</th>
+      </tr>
+      <tr>
+        <td>Great White Shark</td>
+        <td>Carcharodon carcharias</td>
+        <td>Coastal & Offshore Waters</td>
+        <td>Carnivore</td>
+        <td>15-20 feet</td>
+      </tr>
+      <tr>
+        <td>Hammerhead Shark</td>
+        <td>Sphyrnidae</td>
+        <td>Tropical Waters</td>
+        <td>Carnivore</td>
+        <td>13 feet</td>
+      </tr>
+      <tr>
+        <td>Whale Shark</td>
+        <td>Rhincodon typus</td>
+        <td>Tropical Oceans</td>
+        <td>Filter Feeder</td>
+        <td>40 feet</td>
+      </tr>
+      <tr>
+        <td>Reef Shark</td>
+        <td>Carcharhinidae</td>
+        <td>Coral Reefs</td>
+        <td>Carnivore</td>
+        <td>5-6 feet</td>
+      </tr>
+       </table>
+  </div>
+  </section>
+
+  <!-- -------visit-us with google map embedded--- -->
+<section class="visit-us" id="visit-us">
+  <h2>Visit Us</h2>
+  <p class="">Plan your next visit  to Nexus Aquarium</p>
+
+ <div class="visit-us-grid">
+
+  <div class="address">
+    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+    <h3>Location</h3>
+
+  <div class="detail">
+    <p>123 ocean Dive <br>
+    City center, Kaula Lampur<br>
+    Malayia</p>
+   </div>
+
+   <div class="get-direction">
+    <i class="fa-solid fa-location-arrow"></i>
+    <span>Get Directions</span>
+  </div>
+
+  </div>
+
+  <div class="timings">
+    <div class="icon"><i class="fa-solid fa-clock"></i></div>
+    <h3>Opening Hours</h3>
+
+    <div class="detail">
+    <p>Monday-Friday: <br>
+    9:00AM 7:00PM</p>
+
+    <p>Saturday-Sunday <br>
+    8:00AM 8:00PM</p>
+
+    <p>Holidays: <br>10:00AM-7:00PM</p>
+    </div>
+
+  </div>
+
+  <div class="phone">
+    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+    <h3>Phone</h3>
+
+    <p>General Inquiries: <br>
+    +1 (444) 123-789</p>
+
+    <p>Group Bookings: <br>
+    +1 (444) 123-789</p>
+
+    <p>Emergency: <br>
+    +1 (444) 123-789</p>
+
+  </div>
+
+  <div class="email">
+    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+
+    <h3>Email</h3>
+    <p>General Inquiries: <br>
+    +1 (444) 123-789</p>
+
+    <p>Group Bookings: <br>
+    +1 (444) 123-789</p>
+
+    <p>Emergency: <br>
+    +1 (444) 123-789</p>
+
+  </div>
+
+ </div> <!--visit-us 1st grid closes here-->
+
+ <div class="map-container"> 
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.797658547662!2d101.71817209999999!3d3.1480224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362d89b7ce83%3A0xa710b1b5d99fce87!2sMenara%20Worldwide%2C%20198%2C%20Jln%20Bukit%20Bintang%2C%20Kuala%20Lumpur%2C%2050450%20Kuala%20Lumpur%2C%20Wilayah%20Persekutuan%20Kuala%20Lumpur%2C%20Malaysia!5e0!3m2!1sen!2s!4v1762813721438!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="map-overlay"></div>
+</div>
+
+<div class="message">
+  <h3>Ask a question or share your thoughts</h3>
+  <p>Connect with us for inquiries about bookings and educational programs, or tell us how we can enhance your aquarium experience.</p>
+
+  <button class=""><a href="Booking.html">Book a visit</a></button>
+  <button class=""><a href="feedback.html">Share Feedback</a></button>
+</div>
+
+
+  
+</section>
+
+
+
+<footer>
+  <div class="footer-top">
+  <div class="logo-box">
+    <div>
+      <img src="./media/NexusAquariumlogo.png" alt="" class="logo">
+      <p>Discover the wonders of the ocean and marine life at Nexus Aquarium</p>
+    </div>
+  </div>
+
+  <div class="quick-links">
+    <h4>Quick links</h2>
+    <ul>
+      <li><a href="#carousel">Home</a>
+       <li><a href="#gallery-section">Gallery</a> 
+        <li><a href="#marine-life-table">MarineLife</a>
+          <li><a href="#upcoming-events">Events</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="information">
+    <h4>Information</h3>
+    <ul>
+      <li><a href="Booking.html">Book tickets</a>
+       <li><a href="#visit-us">Contact us</a> 
+        <li><a href="feedback.html">feedback</a>
+          <li><a href="#siteseeing-section">Siteseeing</a>
+      </li>
+    </ul>
+    
+  </div>
+
+  <div class="social-links">
+    <h3>connect with us</h3>
+    <div class="social-icons">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+    </div>
+    <p>follow us for updates and special events </p>
+  </div>
+
+  <div>
+
+
+</footer>
+<div class="footer-bottom" >
+   <p>@202 Nexus Aquarium. all rights reserved</p> 
+   <ul>
+    <li><a href="">privacy policy</a></li>
+    <li><a href="">terms of service</a></li>
+    <li><a href="">accessibility</a></li>
+  </ul>
+  </div>
+
+  
+
+
+</body>
+<!-- --javascript for navbar add class toggle functioning---- -->
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.navbar ul');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');   
+  menuToggle.classList.toggle('menu-open'); 
+
+  // accessibility toggle
+  const isOpen = nav.classList.contains('open');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+});
+</script>
+
+
+
+   
+ <script>
+  // ----carousel js-----
+ const carouselItems = document.querySelectorAll('.carousel > .list > .item');
+  const nextBtn = document.querySelector('.arrows .next');
+  const prevBtn = document.querySelector('.arrows .previous');
+
+  let current = 0; // active index
+  
+  function updateCarousel(index) {
+    // ensure index loops around
+    if (index >= carouselItems.length) index = 0;
+    if (index < 0) index = carouselItems.length - 1;
+    current = index;
+
+    // update main carousel
+    carouselItems.forEach((item, i) => {
+      item.classList.toggle('active', i === current);
+    });
+
+ 
+  }
+
+  // arrow click handlers
+  nextBtn.addEventListener('click', () => updateCarousel(current + 1));
+  prevBtn.addEventListener('click', () => updateCarousel(current - 1));
+
+ 
+
+  // init
+  updateCarousel(0);
+
+// ----------auto change slider plus when user presses button reset timer-------
+let autoSlideInterval = 5000; // 8 seconds
+
+let autoSlide = setInterval(() => {
+  updateCarousel(current + 1);
+}, autoSlideInterval);
+
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(() => {
+    updateCarousel(current + 1);
+  }, autoSlideInterval);
+}
+
+nextBtn.addEventListener("click", resetAutoSlide);
+prevBtn.addEventListener("click", resetAutoSlide);
+
+
+
+</script> 
+
+<!-- javascript for header that fades away on sliding down  -->
+<script>
+  window.addEventListener("scroll", () => {
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+<!-- --javascript for static sitelocation carousel----- -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".sitelocation-images");
+  const slides = document.querySelectorAll(".sitelocation-images > div");
+  const nextBtn = document.querySelector(".sitelocation-next");
+  const prevBtn = document.querySelector(".sitelocation-prev");
+  
+  let index = 0;
+
+  const updateCarousel = () => {
+    // Calculate the translation based on slide width + gap
+    const slideWidth = slides[0].offsetWidth;
+    const gap = 10; // matches your CSS gap
+    const translateX = -index * (slideWidth + gap);
+    track.style.transform = `translateX(${translateX}px)`;
+  };
+
+  nextBtn.addEventListener("click", () => {
+    if (index < slides.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  // Initialize carousel position
+  updateCarousel();
+});
+</script>
+
+<!-- ---j-query for tables data show--- -->
+<script>
+    $(document).ready(function() {
+      $('#fish').show();
+      $('.tabs button').click(function() {
+        var tableToShow = $(this).data('show');
+        $('.table-container').hide();
+        $('#' + tableToShow).show();
+      });
+    });
+  </script>
+
+
+
+<!-- // javascript for site seeing grid hide and show  -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.querySelector(".siteseeing-btn");
+  const wrapper = document.querySelector(".siteseeing-section-wrapper");
+  const icon = btn.querySelector("i"); // the arrow inside the button
+
+  // hide wrapper initially
+  wrapper.style.maxHeight = "0px";
+  wrapper.style.overflow = "hidden";
+  wrapper.style.transition = "max-height 0.8s ease";
+
+  let open = false;
+
+  btn.addEventListener("click", function () {
+    if (!open) {
+      wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+      icon.classList.remove("fa-angles-down");
+      icon.classList.add("fa-angles-up");
+      open = true;
+    } else {
+      wrapper.style.maxHeight = "0px";
+      icon.classList.remove("fa-angles-up");
+      icon.classList.add("fa-angles-down");
+      open = false;
+    }
+  });
+
+});
+
+
+
+
+</script>
+</html>
